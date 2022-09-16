@@ -1,0 +1,44 @@
+/* html,
+body {
+    font-family: 'Courier New', Courier, monospace;
+} */
+
+
+/* Font Styles */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+h4 {
+    font-weight: 900;
+    font-size: 22px;
+    line-height: 26px;
+    color: #2C2C2C;
+    margin: 8px 0;
+}
+
+p {
+    font-size: 14px;
+    line-height: 21px;
+    color: #6E6E6E;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    color: #4B4B4B;
+}
+
+h1.small {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    color: #4B4B4B;
+}
