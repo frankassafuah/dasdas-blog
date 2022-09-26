@@ -11,6 +11,12 @@
 import Header from "@/components/header.vue";
 export default {
   name: "App",
+  metaInfo: {
+   title: 'Dasdas',
+   meta: [
+    { charset: 'utf-8'}
+   ]
+  },
   components: {
     Header,
   },

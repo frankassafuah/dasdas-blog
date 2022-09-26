@@ -8,7 +8,7 @@
         <div class="front-end">
           <h1>Front-end</h1>
           <h1>·</h1>
-          <h1 class="small">1 Hour Ago</h1>
+          <h1 class="small">{{timeAgo}}</h1>
         </div>
         <h4 v-html="blogTitle"></h4>
         <div class="description-text">
@@ -41,7 +41,11 @@ export default {
     blogContent() {
       return this.blog.content?.rendered || "";
     },
-  },
+    timeAgo() {
+      return this.moment(this.blog.date, "YYYYMMDD").fromNow();
+
+    }
+  }
 };
 </script>
 

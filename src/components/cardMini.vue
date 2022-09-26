@@ -12,7 +12,7 @@
         <div class="front-end">
           <h1>Front-end</h1>
           <h1>·</h1>
-          <h1 class="small">1 Month Ago</h1>
+          <h1 class="small">{{timeAgo}}</h1>
         </div>
         <h4 v-html="blog.title.rendered" />
         <div class="description-text">
@@ -36,6 +36,11 @@ export default {
     blog: {
       type: Object,
       default: () => ({}),
+    },
+  },
+  computed: {
+    timeAgo() {
+      return this.moment(this.blog.date, "YYYYMMDD").fromNow();
     },
   },
 };
@@ -77,9 +82,9 @@ export default {
   gap: 4px;
 }
 
-.description-container{
-    height: 202px;
-    position: relative;
+.description-container {
+  height: 202px;
+  position: relative;
 }
 
 .description-container .read-full {

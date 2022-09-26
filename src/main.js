@@ -6,9 +6,16 @@ import axios from "axios";
 import VueAxios from "vue-axios";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import { store } from "./store/store";
+import moment from 'moment';
+import VueMeta from 'vue-meta';
+
+//Vue meta setup in main.js
+Vue.use(VueMeta)
 
 Vue.config.productionTip = false;
 
+Vue.prototype.moment = moment
 axios.defaults.baseURL = "https://techcrunch.com/wp-json/wp/v2/";
 
 //FontAwesome setup in main.js
@@ -32,4 +39,5 @@ const router = new VueRouter({
 new Vue({
     render: (h) => h(App),
     router,
+    store: store
 }).$mount("#app");
